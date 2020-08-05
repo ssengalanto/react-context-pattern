@@ -6,12 +6,12 @@ export interface CountState {
   count: number;
 }
 
-export const initialCountState: CountState = {
+export const countState: CountState = {
   count: 0,
 };
 
 export const countReducer = (
-  state: CountState = initialCountState,
+  state: CountState = countState,
   action: CountActions
 ): CountState =>
   produce(state, (draft: Draft<CountState>) => {
