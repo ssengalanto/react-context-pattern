@@ -3,7 +3,7 @@ import React, { useReducer, createContext, useContext } from 'react';
 import { CountActions } from './count.actions';
 import { countReducer, CountState, initialCountState } from './count.reducer';
 
-type Dispatch = (action: CountActions) => void;
+type Dispatch = React.Dispatch<CountActions>;
 
 const CountStateContext = createContext<CountState | undefined>(undefined);
 const CountDispatchContext = createContext<Dispatch | undefined>(undefined);
